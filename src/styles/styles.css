@@ -1,0 +1,1536 @@
+/* Variables de color */
+
+:root {
+  --azul: #6d98c9;
+  --azulClaro: #a8c1e9;
+  --azulOscuro: #3c6aa7;
+}
+
+/* Fuente personalizada */
+
+@font-face {
+  font-family: meditative;
+  src: url(meditative.ttf);
+}
+
+/* Estilos globales */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Regular";
+}
+
+/* Estilos del header */
+
+header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.headerBanner {
+  height: 100vh;
+}
+.header__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul);
+}
+.headerBanner__content {
+  background-color: transparent;
+}
+.header__nav {
+  color: #fff;
+  margin: 0 3rem;
+  cursor: pointer;
+}
+
+.header__imagen {
+  padding: 0.5rem;
+  width: 9rem;
+  height: 4rem;
+  border-radius: 0.9375rem;
+  margin: 0 3rem;
+}
+
+.header__lista {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  font-family: meditative;
+
+}
+
+.header__elementoLista {
+  margin: 0 1rem;
+}
+
+.boton__elementoLista {
+  background-color: var(--azulClaro);
+  text-align: center;
+  padding: .625rem 1.25rem;
+  border-radius: .3125rem;
+  cursor: pointer;
+  box-shadow: 0 6px .75rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header__link {
+  text-decoration: none;
+  color: white;
+}
+.header__elementoLista.active .header__link {
+  border-bottom: 2px solid white;
+}
+
+.boton__elementoLista:hover {
+  background-color: var(--azulOscuro);
+}
+
+.header__banners {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header__banner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.header__banner-img.active {
+  opacity: 1;
+}
+
+/* Estilos de la sección de tarjetas */
+
+
+.seccionCardsInicio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  padding: 3rem 0;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.seccionCardsInicio__card {
+  width: 20rem;
+  height: 30rem;
+  border-radius: .625rem;
+  background-color: rgba(255, 255, 255, 0.411);
+  box-shadow: 0 0.5rem 0.8rem #565656;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seccionCardsInicio__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+}
+.seccionCardsInicio__imagen {
+  width: 20rem;
+  height: 14rem;
+  border-radius: .625rem;
+  object-fit: cover;
+}
+
+.seccionCardsInicio__titulo {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: meditative;
+}
+
+.seccionCardsInicio__datos {
+  color: #666;
+  font-size: .75rem;
+  font-family: "Segoe UI";
+  font-weight: bold;
+}
+.seccionCardsInicio__descripcion {
+  color: #666;
+  font-size: 1.125rem;
+  font-family: "Segoe UI";
+}
+
+.seccionCardsInicio__boton {
+  display: inline-block;
+  padding: .625rem 1.25rem;
+  background-color: var(--azulClaro);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 1.5625rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 6px .75rem rgba(0, 0, 0, 0.1);
+}
+
+.seccionCardsInicio__boton:hover {
+  background-color: var(--azulOscuro);
+}
+
+/* Estilos de la sección del proyecto */
+
+.proyecto {
+  padding: 5rem 0 0 0;
+  background-color: var(--azulClaro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proyectoInfo {
+  padding: 5rem 0 5rem 0;
+}
+.contenedorProyecto {
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 80%;
+  box-shadow: 0 0.5rem 0.8rem #565656;
+}
+
+.contenidoProyecto {
+  flex: 1;
+  padding: 1.25rem;
+}
+
+.contenidoProyecto__titulo {
+  font-size: 1.5rem;
+  color: #333;
+  font-family: meditative;
+}
+.contenidoProyecto__texto {
+  line-height: 1.6;
+  color: #666;
+}
+
+.botonEnlace {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9375rem;
+}
+
+.contenidoProyecto__boton {
+  background-color: var(--azul);
+  color: #fff;
+  border: none;
+  padding: .625rem 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contenidoProyecto__boton:hover {
+  background-color: var(--azulOscuro);
+}
+
+.contenidoProyecto__imagen {
+  border-radius: 8px;
+  width: 50%;
+  object-fit: cover;
+}
+
+/* Estilos del footer */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logoImagen {
+  padding: 0.5rem;
+  width: 9rem;
+  height: 4rem;
+  border-radius: 0.9375rem;
+}
+
+.footer__rrss {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1rem 0;
+}
+
+.footer__rrssEnlace {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer__rrssEnlace:hover {
+  color: var(--azulClaro);
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  margin:0 0 1rem 0;
+}
+
+.footer__paginas {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+}
+
+.footer__Pag {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer__Pag:hover {
+  color: var(--azulClaro);
+}
+
+.botonArriba {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+  border: #3c6aa7 1px solid;
+  border-radius: 1rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.4s ease-out;
+  display: none;
+  color: #3c6aa7;
+}
+
+.botonArriba:hover {
+  background-color: #3c6aa7;
+  color: white;
+  border: white 1px solid;
+}
+
+/* Responsive Inicio */
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .headerBanner {
+    max-width: 100%;
+  }
+
+  .header__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__nav {
+    margin: 1rem;
+  }
+
+  .header__lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__elementoLista {
+    margin: 0.5rem 0;
+  }
+
+  .seccionCardsInicio {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .seccionCardsInicio__card {
+    width: 70%;
+    height: auto;
+  }
+
+  .seccionCardsInicio__imagen {
+    width: 100%;
+  }
+
+  .proyecto {
+    padding: 2rem 1rem;
+  }
+  .contenedorProyecto {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .contenidoProyecto__titulo {
+    text-align: center;
+  }
+  .contenidoProyecto__imagen {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
+
+/* Tablets (768px hasta 1250px) */
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+  .seccionCardsInicio {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+
+  .contenedorProyecto {
+    flex-direction: column;
+    max-width: 80%;
+    align-items: center;
+    display: flex;
+  }
+
+  .contenidoProyecto__imagen {
+    display: flex;
+    justify-items: center;
+    width: 70%;
+    margin: 0 0 1.5rem 0;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+  .header__banner-img {
+    object-fit: fill;
+  }
+  .header__link {
+    font-size: 1.2rem;
+  }
+}
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .header__banner-img {
+    object-fit: fill;
+  }
+  .header__imagen {
+    padding: 2.5rem;
+    width: 20rem;
+    height: 9rem;
+    border-radius: 3rem;
+  }
+  .header__elementoLista {
+    font-size: 2.5rem;
+  }
+  .seccionCardsInicio__card {
+    width: 45rem;
+    height: 70rem;
+  }
+  .seccionCardsInicio {
+    padding: 10rem 0;
+  }
+
+  .seccionCardsInicio__imagen {
+    width: 45rem;
+    height: 30rem;
+  }
+  .seccionCardsInicio__titulo {
+    font-size: 4rem;
+  }
+  .seccionCardsInicio__datos {
+    font-size: 1.5625rem;
+  }
+  .seccionCardsInicio__descripcion {
+    font-size: 2.8125rem;
+  }
+  .seccionCardsInicio__boton {
+    padding: 2.5rem 5rem;
+    font-size: 2.1875rem;
+  }
+  .contenidoProyecto__texto {
+    font-size: 1.875rem;
+  }
+  .contenidoProyecto__titulo {
+    font-size: 3.125rem;
+  }
+  .contenidoProyecto__boton {
+    padding: 1.25rem 3.125rem;
+    font-size: 1.875rem;
+  }
+  .footer__copyright {
+    font-size: 2.8rem;
+  }
+  .footer__Pag {
+    font-size: 2rem;
+  }
+  .footer__logoImagen {
+    padding: 2.5rem;
+    width: 20rem;
+    height: 9rem;
+    border-radius: 3rem;
+  }
+  .footer__rrssEnlace {
+    font-size: 3.5rem;
+  }
+  .botonArriba {
+    font-size: 1.5rem;
+    border-radius: 3.5rem;
+    width: 5rem;
+    height: 4rem;
+  }
+  .botonEnlace {
+    font-size: 1.9375rem;
+  }
+}
+
+/* Estilos seccion adoptame */
+
+.adoptame {
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.galeriaContenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  padding: 3rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.galeriaAnimal {
+  width: 20rem;
+  height: auto;
+  border-radius: .625rem;
+  background-color: rgba(255, 255, 255, 0.411);
+  box-shadow: 0 0.5rem 0.8rem #565656;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.galeriaAnimal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+}
+
+.imagenAnimal {
+  width: 100%;
+  height: 14rem;
+  border-radius: .625rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.nombreAnimal {
+  font-family: meditative;
+  margin: .625rem 0 0 0;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.descripcionAnimal,
+.razaAnimal,
+.edadAnimal,
+.generoAnimal {
+  color: #666;
+  font-size: .875rem;
+  font-family: "Segoe UI";
+  margin: 5px 0;
+}
+
+.botonesContenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnGaleria {
+  font-family: meditative;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 1rem;
+  width: 100%;
+  border: none;
+  height: 5rem;
+  cursor: pointer;
+  border-radius: .625rem;
+  background-color: white;
+  color: var(--azulOscuro);
+}
+
+.btnGaleria.active {
+  background-color: var(--azulOscuro);
+  color: white;
+}
+
+.contendor_botonNuevo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botonNuevo {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 1rem;
+  width: 100%;
+  border: none;
+  height: 5rem;
+  cursor: pointer;
+  border-radius: .625rem;
+  background-color: rgba(255, 255, 255, 0.24);
+  color: var(--azul);
+}
+.botonNuevo:hover {
+  text-decoration: underline;
+}
+
+.iconosAnimal {
+  font-size: 1.625rem;
+  color: var(--azul);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.iconosAnimal:hover {
+  color: var(--azulOscuro);
+}
+
+/* Responsive Adoptame */
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .galeriaContenedor {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0.5rem;
+    padding: 2rem 0;
+  }
+}
+/* Tabletas (768px hasta 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .galeriaContenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .btnGaleria {
+    font-size: 2.5rem;
+  }
+  .botonNuevo {
+    font-size: 2.5rem;
+  }
+  .galeriaAnimal {
+    width: 42rem;
+    padding: 3rem;
+  }
+  .imagenAnimal {
+    height: 30rem;
+  }
+  .nombreAnimal {
+    font-size: 3rem;
+  }
+  .descripcionAnimal,
+  .razaAnimal,
+  .edadAnimal,
+  .generoAnimal {
+    font-size: 1.875rem;
+    margin: 0.9375rem;
+  }
+  .iconosAnimal {
+    font-size: 3.625rem;
+  }
+}
+
+/* Estilos seccion quienes somos */
+
+.quienesSomos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quienesSomos__texto {
+  padding: 4rem 0;
+  font-family: Segoe UI;
+}
+
+.quienesSomos__textoTitulo {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: meditative;
+}
+
+.quienesSomos__textoInfo {
+  padding: 0 12rem;
+}
+
+.carousel {
+  background-image: url(fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel__contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 4rem 0;
+}
+
+.carousel__img {
+  width: 55rem;
+  height: 35rem;
+  object-fit: cover;
+}
+
+.carousel__btn {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: #3c6aa7;
+  color: white;
+  border: white 1px solid;
+  border-radius: .625rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.carousel__btn:hover {
+  background-color: white;
+  color: #3c6aa7;
+  border: #3c6aa7 1px solid;
+}
+.carousel__titulo {
+  font-family: Gameria;
+  font-size: 3rem;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Responsive Quienes somos */
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .quienesSomos__textoInfo {
+    padding: 0 2rem;
+}
+.carousel__img {
+  width: 15rem;
+  height: 14rem;
+}
+.carousel__btn {
+  margin: 0.2rem;
+}
+}
+/* Tabletas (768px hasta 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .quienesSomos__textoInfo {
+    padding: 0 4rem;
+}
+.carousel__img {
+  width: 40rem;
+  height: 30rem;
+}
+}
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .quienesSomos__textoInfo {
+    padding: 0 18rem;
+    font-size: 2.3rem;
+}
+.quienesSomos__textoTitulo {
+  font-size: 4rem;
+}
+.carousel__img {
+  width: 105rem;
+  height: 70rem;
+}
+.carousel__btn {
+  font-size: 3rem;
+  margin: 2rem;
+  padding: 3rem;
+}
+}
+/* Estilos seccion logout */
+
+.logout {
+  height: 71.2vh;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0 0 0;
+}
+
+.logoutTitulo {
+  font-family: meditative;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.boton__logoutBotones {
+  font-family: meditative;
+  margin: 0.5rem;
+  display: inline-block;
+  padding: .625rem 1.25rem;
+  background-color: var(--azulClaro);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 .375rem .75rem rgba(0, 0, 0, 0.1);
+}
+
+.logoutImagen {
+  width: 35rem;
+  height: auto;
+  display: flex;
+}
+
+/* Responsive Logout */
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .logoutTitulo {
+    font-size: 1.5rem;
+  }
+  .logoutImagen {
+    width: 20rem;
+}
+.logout{
+  height: 59vh;
+}
+}
+/* Tabletas (768px hasta 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .logoutTitulo {
+    font-size: 2rem;
+}
+.logoutImagen {
+  width: 23rem;
+}
+.logout{
+  height: 67.2vh;
+}
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+  .logoutTitulo {
+    font-size: 3.5rem;
+}
+.logoutImagen {
+  width: 43rem;
+}
+.boton__logoutBotones {
+  font-size: 1.5625rem;
+}
+.logout{
+  height: 80.2vh;
+}
+}
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .logoutTitulo {
+    font-size: 5rem;
+}
+.logoutImagen {
+  width: 70rem;
+}
+.boton__logoutBotones {
+  font-size: 3rem;
+  padding: 2rem;
+}
+.logout{
+  height: 68.5vh;
+}
+}
+/* Estilos seccion login */
+
+.formularioLogin {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login {
+  width: 31.25rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+  background-color: #ffffff6b;
+}
+.loginError {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.loginEtiqueta {
+  font-family: meditative;
+  display: block;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.loginInput {
+  width: 100%;
+  padding: 0.5rem;
+  margin:0 0 1rem 0;
+  border: 1px solid #ccc0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.loginInput:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.loginButton {
+  background-color: var(--azulClaro);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: var(--azulOscuro);
+}
+
+/* Responsive login */
+
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+  .login {
+    width: 42rem;
+    padding: 3rem;
+  }
+  .loginEtiqueta {
+    font-size: 1.5rem;
+  }
+  .loginInput {
+    padding: 1rem;
+  }
+  .loginInput {
+    font-size: 1.5rem;
+  }
+}
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .login {
+    width: 70rem;
+    padding: 7rem;
+  }
+  .loginEtiqueta {
+    font-size: 3rem;
+  }
+  .loginInput {
+    padding: 2.5srem;
+  }
+  .loginInput {
+    font-size:3rem;
+  }
+}
+.adopcion {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.adopcionTitulo {
+  font-family: meditative;
+  text-align: center;
+  margin:0 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.formularioAdopcion {
+  width: 31.25rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+  background-color: #ffffff6b;
+}
+
+.etiqueta__formularioAdopcion {
+  display: block;
+  margin:0 0 0.5rem 0;
+  font-weight: bold;
+  color: #333;
+  font-family: meditative;
+}
+
+.input__formularioAdopcion {
+  width: 100%;
+  padding: 0.5rem;
+  margin:0 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.textarea__formularioAdopcion {
+  resize: none;
+  width: 100%;
+  height: 4rem;
+  margin: 0 0 1rem 0;
+}
+
+.input__formularioAdopcion:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.boton__formularioAdopcion {
+  background-color: var(--azulClaro);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton__formularioAdopcion:hover {
+  background-color: var(--azulOscuro);
+}
+
+.descripcion__formularioAdopcion {
+  margin: 1rem 0 0 0;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Responsive formulario adopcion */
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .adopcion {
+    height: 100vh;
+  }
+  .formularioAdopcion {
+    width: 15rem;
+    padding: 1rem;
+  }
+}
+/* Tabletas (768px hasta 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .adopcion {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+  .descripcion__formularioAdopcion {
+    font-size: 1.5rem;
+}
+.adopcionTitulo {
+  font-size: 2.5rem;
+}
+.etiqueta__formularioAdopcion {
+  font-size: 1.5rem;
+}
+.formularioAdopcion {
+  width: 40rem;
+}
+}
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .descripcion__formularioAdopcion {
+    font-size: 2.5rem;
+}
+.adopcionTitulo {
+  font-size: 3.5rem;
+}
+.etiqueta__formularioAdopcion {
+  font-size: 2.5rem;
+}
+.formularioAdopcion {
+  width: 65rem;
+  padding: 5rem;
+}
+.boton__formularioAdopcion {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+}
+/* Estilos seccion borrar-adoptar mascota */
+
+.borrarMascota {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.check__borrarMascota {
+  width: 31.25rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+  background-color: #ffffff6b;
+  display: flex;
+  justify-content: space-around;
+}
+
+.titulo__borrarMascota {
+  font-family: meditative;
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+}
+
+.boton__borrarMascota {
+  background-color: var(--azulClaro);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton__borrarMascota:hover {
+  background-color: var(--azulOscuro);
+}
+
+/* Responsive borrar mascota */
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .check__borrarMascota {
+    width: 15rem;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+  .titulo__borrarMascota {
+    font-size: 2.5rem;
+  }
+  .boton__borrarMascota {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+}
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .check__borrarMascota {
+    width: 70rem;
+  }
+  .titulo__borrarMascota {
+    font-size: 4.5rem;
+  }
+  .boton__borrarMascota {
+    font-size: 3.5rem;
+    padding: 3rem 4rem;
+}
+}
+/* Estilos seccion editar */
+
+.editar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.editarAnimal {
+  margin: 2rem;
+}
+
+.titulo__editarAnimal {
+  font-family: meditative;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.formulario__editarAnimal {
+  width: 31.25rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.67);
+}
+
+.etiqueta__editarAnimal {
+  font-family: meditative;
+  display: block;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.input__editarAnimal,
+.textarea__editarAnimal,
+.select__editarAnimal {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.textarea__editarAnimal {
+  resize: none;
+  height: 4rem;
+}
+
+.input__editarAnimal:focus,
+.textarea__editarAnimal:focus,
+.select__editarAnimal:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit__editarAnimal {
+  background-color: var(--azulClaro);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit__editarAnimal:hover {
+  background-color: var(--azulOscuro);
+}
+
+
+/* Responsive Editar animal */
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .formulario__editarAnimal {
+    width: 15rem;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+  .formulario__editarAnimal {
+    width: 45rem;
+  }
+  .etiqueta__editarAnimal {
+    font-size: 1.5rem;
+  }
+  .input__editarAnimal, .textarea__editarAnimal, .select__editarAnimal {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  .submit__editarAnimal {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  }
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .formulario__editarAnimal {
+    width: 60rem;
+  }
+  .etiqueta__editarAnimal {
+    font-size: 2.5rem;
+  }
+  .input__editarAnimal, .textarea__editarAnimal, .select__editarAnimal {
+    padding: 2rem;
+    font-size: 2.2rem;
+  }
+  .submit__editarAnimal {
+    font-size: 2.2rem;
+    padding: 2rem;
+  }
+  .titulo__editarAnimal {
+    margin: 0 0 2rem 0;
+    font-size: 2.5rem;
+  }
+}
+/* Estilos seccion nuevo animal */
+
+.nuevo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nuevoAnimal {
+  height: 150vh;
+}
+.titulo__nuevoAnimal {
+  text-align: center;
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+  font-family: meditative;
+}
+
+.formulario__nuevoAnimal {
+  width: 31.25rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+  background-color: #ffffff6b;
+}
+
+.etiqueta__nuevoAnimal {
+  font-family: meditative;
+  display: block;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.input__nuevoAnimal,
+.textarea__nuevoAnimal,
+.select__nuevoAnimal {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.textarea__nuevoAnimal {
+  resize: none;
+  height: 4rem;
+}
+
+.input__nuevoAnimal:focus,
+.textarea__nuevoAnimal:focus,
+.select__nuevoAnimal:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.boton__nuevoAnimal {
+  background-color: var(--azulClaro);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton__nuevoAnimal:hover {
+  background-color: var(--azulOscuro);
+}
+
+/* Responsive nuevo animal */
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .formulario__nuevoAnimal {
+    width: 15rem;
+  }
+  .nuevoAnimal {
+    height: 135vh;
+}
+}
+
+/* Tabletas (768px hasta 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nuevoAnimal {
+    height: 135vh;
+}
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+  .formulario__nuevoAnimal {
+    font-size: 1.5rem;
+    width: 40rem;
+}
+.nuevoAnimal {
+  height: 130vh;
+}
+.titulo__nuevoAnimal {
+  font-size: 2.5rem;
+}
+.input__nuevoAnimal, .textarea__nuevoAnimal, .select__nuevoAnimal {
+  font-size: 1rem;
+  padding: 1.5rem;
+}
+.boton__nuevoAnimal {
+  font-size: 1.5rem;
+  padding: 1rem
+}
+}
+
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+  .formulario__nuevoAnimal {
+    font-size: 2.5rem;
+    width: 60rem;
+    padding: 3rem;
+}
+.nuevoAnimal {
+  height: 100vh;
+}
+.titulo__nuevoAnimal {
+  font-size: 3.5rem;
+}
+.input__nuevoAnimal, .textarea__nuevoAnimal, .select__nuevoAnimal {
+  font-size: 2rem;
+  padding: 2.5rem;
+}
+.boton__nuevoAnimal {
+  font-size: 2.5rem;
+  padding: 1.5rem
+}
+}
+
+/* Estilos seccion contacto */
+
+.contacto{
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.seccionContacto{
+  height: 70vh;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tituloContacto {
+  font-family: meditative;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.infoContacto {
+  width: 31.25rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.67);
+}
+
+.etiqueta__infoContacto {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Móviles (hasta 767px) */
+@media screen and (max-width: 767px) {
+  .seccionContacto{
+    height: 90vh;}
+    .infoContacto {
+      width: 15rem;
+      font-size: 1rem;
+    }
+    .tituloContacto {
+      font-size: 2rem;
+    }
+
+}
+
+/* Tabletas (768px hasta 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .seccionContacto {
+    height: 80vh;
+  }
+}
+
+/* Pantallas 4K (más de 2560px) */
+@media screen and (min-width: 2560px) {
+    .infoContacto {
+      width: 65rem;
+      font-size: 3rem;
+    }
+    .tituloContacto {
+      font-size: 5rem;
+    }
+}
+
+/* estilos useFecht */
+
+.cargando, .errorCargando{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  margin: 0;
+  padding: 1.5rem;
+  background-color: var(--azulClaro);
+}
