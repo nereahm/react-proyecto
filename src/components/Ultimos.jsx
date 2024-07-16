@@ -21,7 +21,7 @@ function Ultimos() {
         <div key={perro.id_animal} className="seccionCardsInicio__card">
           <img
             className="seccionCardsInicio__imagen"
-            src={`${import.meta.env.VITE_API_PERROS}/${perro.imagen}`}
+            src={`/${perro.imagen}`}
             alt={perro.nombre}
           />
           <h2 className="seccionCardsInicio__titulo">{perro.nombre}</h2>
