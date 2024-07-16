@@ -19,7 +19,7 @@ const GaleriaGatos = () => {
     <div className="galeriaContenedor">
       {gatos.map(gato => (
         <div key={gato.id_animal} className="galeriaAnimal">
-          <img src={`/${gato.imagen}`} alt={gato.nombre} className='imagenAnimal'/>
+          <img src={'https://express-proyecto.vercel.app/' + gato.imagen} alt={gato.nombre} className='imagenAnimal'/>
           <p className='nombreAnimal'>{gato.nombre}</p>
           <p className='descripcionAnimal'>{gato.descripcion}</p>
           <p className='razaAnimal'><strong>Raza:</strong> {gato.raza}</p>
