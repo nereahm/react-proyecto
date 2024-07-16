@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch"; // Importa el hook personalizado useFetch
 
 function Ultimos() {
-  const link = import.meta.env.VITE_API_PERROS + "/ultimos"; // URL completa para obtener los últimos perros
+  const link = import.meta.env.VITE_API_PERROS + "/ultimos"; 
 
   // Llamando a useFetch para obtener los últimos tres perros
   const { data: tresUltimos, loading, error } = useFetch(link);
 
   useEffect(() => {
-    // No necesitamos lógica aquí relacionada con axios, ya que useFetch maneja la solicitud y el estado
   }, []); // Solo se ejecuta una vez al montar el componente
 
   if (loading) return <p className="cargando">Loading...</p>;
