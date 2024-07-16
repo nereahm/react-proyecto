@@ -19,7 +19,7 @@ const GaleriaPerros = () => {
     <div className="galeriaContenedor">
       {perros.map(perro => (
         <div key={perro.id_animal} className="galeriaAnimal">
-          <img src={'http://localhost:3000/' + perro.imagen} alt={perro.nombre} className='imagenAnimal'/>
+          <img src={`/${perro.imagen}`} alt={perro.nombre} className='imagenAnimal'/>
           <p className='nombreAnimal'>{perro.nombre}</p>
           <p className='descripcionAnimal'>{perro.descripcion}</p>
           <p className='razaAnimal'><strong>Raza:</strong> {perro.raza}</p>
