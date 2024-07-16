@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: meditative;
-  src: url(meditative.ttf);
+  src: url('/meditative.ttf');
 }
 
 /* Estilos globales */
@@ -514,6 +514,7 @@ header {
 }
 .galeriaContenedor {
   display: grid;
+  flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   justify-items: center;
@@ -523,6 +524,7 @@ header {
 }
 
 .galeriaAnimal {
+  flex-wrap: wrap;
   width: 20rem;
   height: auto;
   border-radius: .625rem;
