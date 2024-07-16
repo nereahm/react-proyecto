@@ -15,7 +15,7 @@ function BorrarPerro() {
     let opciones = {
       method: "DELETE",
     };
-    fetch(`http://localhost:3000/perros?id_animal=${id_animal}`, opciones)
+    fetch(`https://express-proyecto.vercel.app/perros?id_animal=${id_animal}`, opciones)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "Ok") {

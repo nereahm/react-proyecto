@@ -31,7 +31,7 @@ function NuevoGato() {
             body: JSON.stringify(nuevoGato)
         };
         // Realiza una solicitud fetch para añadir el nuevo gato
-        fetch("http://localhost:3000/gatos", opciones)
+        fetch("https://express-proyecto.vercel.app/gatos", opciones)
             .then(res => res.json())
             .then(data => {
               if (data.status === "okay") { // Si la respuesta es okay, te dirige a la página principal

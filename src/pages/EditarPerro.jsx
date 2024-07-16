@@ -15,7 +15,7 @@ function EditarPerro() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/perros/id?id_animal=" + id_animal)
+    fetch("https://express-proyecto.vercel.app/perros/id?id_animal=" + id_animal)
       .then((res) => res.json())
       .then((data) => {
         setPerro(data);

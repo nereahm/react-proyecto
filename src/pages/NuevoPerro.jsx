@@ -23,7 +23,7 @@ function NuevoPerro() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/perros", nuevoPerro);
+            const response = await axios.post("https://express-proyecto.vercel.app/perros", nuevoPerro);
             if (response.data.status === "okay") {
                 navigate("/"); 
             }

@@ -17,7 +17,7 @@ function BorrarGato() {
     let opciones = {
       method: "DELETE",
     };
-    fetch(`http://localhost:3000/gatos?id_animal=${id_animal}`, opciones)
+    fetch(`https://express-proyecto.vercel.app/gatos?id_animal=${id_animal}`, opciones)
       .then((res) => res.json()) // Convierte la respuesta a JSON
       .then((data) => {
         if (data.status === "Ok") {
