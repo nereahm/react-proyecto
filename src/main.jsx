@@ -25,7 +25,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <UserProvider>
       <Router>
         {/* Aquí se utiliza Suspense con Routes para manejar la carga diferida */}
-        <Suspense fallback={<div>Cargando...</div>}>
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/adoptame" element={<Adoptame />} />
@@ -65,7 +64,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               element={<RutaPrivada componente={<FormularioAdopcion />} />}
             />
           </Routes>
-        </Suspense>
         <BotonSubir />
         <Footer />
       </Router>
