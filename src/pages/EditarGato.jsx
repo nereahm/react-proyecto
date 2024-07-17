@@ -15,7 +15,7 @@ function EditarGato() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/gatos/id?id_animal=" + id_animal) // Realiza una petición GET para obtener los datos del gato
+    fetch("https://express-proyecto.vercel.app/gatos/id?id_animal=" + id_animal) // Realiza una petición GET para obtener los datos del gato
       .then((res) => res.json())
       .then((data) => {
         setGato(data);
