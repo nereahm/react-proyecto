@@ -704,11 +704,6 @@ header {
   padding: 0 12rem;
 }
 
-.carousel {
-  background-image: url('/fondo.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .carousel__contenedor {
   display: flex;
   justify-content: center;
