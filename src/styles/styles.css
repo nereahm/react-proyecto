@@ -343,6 +343,110 @@ header {
   border: white 1px solid;
 }
 
+
+.servicios {
+  background-color: var(--azulClaro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 2rem 0;
+}
+
+.servicio {
+  width: 100%;
+  max-width: 37.5rem;
+  margin: .625rem 0;
+  display: flex;
+  align-items: center;
+  padding: .9375rem;
+  cursor: pointer;
+  border: 1px solid var(--blanco);
+  border-radius: 8px;
+  background-color: var(--azulOscuro);
+}
+.serviciosTitulo{
+font-family: meditative;
+font-size: 1.5rem;
+margin: 0;
+}
+
+.iconoContenedor {
+  background-color: var(--blanco);
+  padding: .625rem;
+  border-radius: 50%;
+  margin: 0 .9375rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono {
+  font-size: 2rem;
+  color: var(--azulOscuro);
+}
+
+.servicios__nombre {
+  flex-grow: 1;
+  background-color: var(--blanco);
+  padding: .625rem;
+  border-radius: .3125rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--azulOscuro);
+  transition: color 0.3s ease;
+}
+
+.servicios__nombre:hover {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    color: var(--blanco);
+  }
+  50% {
+    color: var(--azulOscuro);
+  }
+}
+
+.servicios__contenido {
+  width: 100%;
+  margin: 1.25rem 0 0 0 0;
+  text-align: left;
+  font-size: 0.9rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 .9375rem;
+  max-height: 0;
+}
+
+.servicio.expanded .servicios__contenido {
+  max-height: 18.75rem; 
+  padding: .9375rem;
+}
+
+.servicios__lista {
+  list-style: none;
+  padding: 0;
+}
+
+.servicios__elemento {
+  margin-bottom: .625rem;
+  color: var(--blanco);
+}
+
+.elementoEnlace {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.elementoEnlace:hover {
+  text-decoration: underline;
+}
+
+.servicios__texto{
+  color: var(--blanco);
+}
 /* Responsive Inicio */
 
 /* Móviles (hasta 767px) */
@@ -400,6 +504,8 @@ header {
     width: 100%;
     margin: 0 0 1rem 0;
   }
+  .servicio {
+    max-width: 16.5rem;}
 }
 
 /* Tablets (768px hasta 1250px) */
@@ -432,6 +538,15 @@ header {
   }
   .header__link {
     font-size: 1.2rem;
+  }
+  .servicios__texto,.elementoEnlace, .servicios__nombre, .servicios__elemento {
+    font-size: 1.5rem;
+  } 
+  .servicio {
+    max-width: 55.5rem;
+  }
+  .serviciosTitulo {
+    font-size: 2.5rem;
   }
 }
 /* Pantallas 4K (más de 2560px) */
@@ -506,6 +621,15 @@ header {
   }
   .botonEnlace {
     font-size: 1.9375rem;
+  }
+  .servicios__texto,.elementoEnlace, .servicios__nombre,.servicios__elemento{
+    font-size: 3rem;
+  } 
+  .servicio {
+    max-width: 70.5rem;
+  }
+  .serviciosTitulo {
+    font-size: 3.5rem;
   }
 }
 
