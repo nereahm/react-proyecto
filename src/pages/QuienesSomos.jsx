@@ -54,20 +54,20 @@ function QuienesSomos() {
           <h2 className="quienesSomos__statsTitulo">Datos de interés</h2>
           <div className="stats__container">
             <div className="stat">
-              <p className="stat__label">Perros rescatados</p>
+              <p className="stat__label">Adopciones</p>
               <h3 className="stat__number">250</h3>
             </div>
             <div className="stat">
-              <p className="stat__label">Usuarios felices con nueva mascota</p>
+              <p className="stat__label">Padrinos</p>
               <h3 className="stat__number">150</h3>
             </div>
             <div className="stat">
-              <p className="stat__label">Gatos para adoptar</p>
+              <p className="stat__label">Colaboradores</p>
               <h3 className="stat__number">18</h3>
             </div>
             <div className="stat">
-              <p className="stat__label">Perros para adoptar</p>
-              <h3 className="stat__number">25</h3>
+              <p className="stat__label">Voluntarios</p>
+              <h3 className="stat__number">31</h3>
             </div>
           </div>
         </div>
