@@ -47,7 +47,29 @@ function QuienesSomos() {
           </p>
         </div>
         <div className="quienesSomos__carousel">
-        <Carousel /> {/* Renderiza el componente Carousel */}
+          <Carousel /> {/* Renderiza el componente Carousel */}
+          <p className="texto__carousel">Hazte una foto con tus perretes y envíanosla 📸</p>
+        </div>
+        <div className="quienesSomos__stats">
+          <h2 className="quienesSomos__statsTitulo">Datos de interés</h2>
+          <div className="stats__container">
+            <div className="stat">
+              <p className="stat__label">Perros rescatados</p>
+              <h3 className="stat__number">250</h3>
+            </div>
+            <div className="stat">
+              <p className="stat__label">Usuarios felices con nueva mascota</p>
+              <h3 className="stat__number">150</h3>
+            </div>
+            <div className="stat">
+              <p className="stat__label">Gatos para adoptar</p>
+              <h3 className="stat__number">18</h3>
+            </div>
+            <div className="stat">
+              <p className="stat__label">Perros para adoptar</p>
+              <h3 className="stat__number">25</h3>
+            </div>
+          </div>
         </div>
       </div>
     </main>
