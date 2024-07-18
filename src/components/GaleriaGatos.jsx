@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CiEdit } from "react-icons/ci";
 import { useUser } from '../context/UsuarioContext';
@@ -12,14 +12,29 @@ const GaleriaGatos = () => {
 
   const { data: gatos, loading, error } = useFetch(apiUrl);
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
   if (loading) return <p className='cargando'>Loading...</p>;
   if (error) return <p className='errorCargando'>Error: {error.message}</p>;
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+  };
 
   return (
     <div className="galeriaContenedor">
       {gatos.map(gato => (
         <div key={gato.id_animal} className="galeriaAnimal">
-          <img src={'https://express-proyecto.vercel.app/' + gato.imagen} alt={gato.nombre} className='imagenAnimal'/>
+          <img 
+            src={'https://express-proyecto.vercel.app/' + gato.imagen} 
+            alt={gato.nombre} 
+            className='imagenAnimal'
+            onClick={() => handleImageClick('https://express-proyecto.vercel.app/' + gato.imagen)}
+          />
           <p className='nombreAnimal'>{gato.nombre}</p>
           <p className='descripcionAnimal'>{gato.descripcion}</p>
           <p className='razaAnimal'><strong>Raza:</strong> {gato.raza}</p>
@@ -44,6 +59,12 @@ const GaleriaGatos = () => {
           )}
         </div>
       ))}
+      {selectedImage && (
+        <div className="modal" onClick={handleCloseModal}>
+          <span className="close">&times;</span>
+          <img className="modal-content" src={selectedImage} alt="Ampliada" />
+        </div>
+      )}
     </div>
   );
 }
