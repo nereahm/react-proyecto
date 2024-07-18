@@ -48,7 +48,7 @@ function QuienesSomos() {
         </div>
         <div className="quienesSomos__carousel">
           <Carousel /> {/* Renderiza el componente Carousel */}
-          <p className="texto__carousel">Hazte una foto con tus perretes y envíanosla 📸</p>
+          <p className="texto__carousel">Haz una foto a tus mascotas y envianosla 📸</p>
         </div>
         <div className="quienesSomos__stats">
           <h2 className="quienesSomos__statsTitulo">Datos de interés</h2>
