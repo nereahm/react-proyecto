@@ -712,12 +712,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 0 4rem 0;
 }
 
 .carousel__img {
-  width: 55rem;
-  height: 35rem;
+  width: 50rem;
+  height: 30rem;
   object-fit: cover;
 }
 
@@ -740,15 +739,76 @@ header {
   color: var(--azulOscuro);
   border: var(--azulOscuro) 1px solid;
 }
-.carousel__titulo {
-  font-family: Gameria;
-  font-size: 3rem;
+.texto__carousel{
   display: flex;
-  margin: 0;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0.1rem;
 }
 
+.quienesSomos__stats {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.quienesSomos__statsTitulo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  padding: .5rem;
+  font-family: meditative;
+}
+
+.stats__container {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--blanco);
+  padding: 1.25rem;
+  border-radius: .625rem;
+  width: 15rem;
+  height: 10rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: initial;
+}
+
+@keyframes vibrate {
+  0% { transform: translate(0); }
+  50% { transform: translate(1px, -1px); }
+  100% { transform: translate(1px, 1px); }
+}
+
+.stat:hover {
+  animation: vibrate 0.2s infinite;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.quienesSomos__statsTitulo{
+  margin: 0;
+}
+.stat__label {
+  font-size: 1.2rem;
+  color: var(--gris);
+  margin-bottom: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.stat__number {
+  font-size: 2.5rem;
+  color: var(--azul);
+}
 
 /* Responsive Quienes somos */
 
@@ -792,6 +852,19 @@ header {
   font-size: 3rem;
   margin: 2rem;
   padding: 3rem;
+}
+.quienesSomos__statsTitulo{
+  font-size: 4rem;
+}
+.stat{
+  padding: 8rem;
+}
+.stat__label {
+  font-size: 2.5rem;
+}
+
+.stat__number {
+  font-size: 5.5rem;
 }
 }
 /* Estilos seccion logout */
