@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Ultimos from "../components/Ultimos";
 import HeaderBanner from "../components/HeaderBanner";
+import Servicios from "../components/Servicios";
 import { Link } from "react-router-dom"; // Importa el componente Link de react-router-dom 
 
 function Inicio() {
@@ -68,6 +69,7 @@ function Inicio() {
           </div>
         </div>
       </div>
+      <Servicios />
     </main>
   );
 }
