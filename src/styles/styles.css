@@ -1464,7 +1464,7 @@ header {
   background-size: cover;
 }
 .seccionContacto{
-  height: 70vh;
+  height: auto;
   display: flex;
     align-items: center;
     justify-content: center;
@@ -1492,10 +1492,22 @@ header {
   color: var(--negro);
 }
 
+.mapaContenedor {
+  padding: 2rem;
+  width: 40rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mapa {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Móviles (hasta 767px) */
 @media screen and (max-width: 767px) {
-  .seccionContacto{
-    height: 90vh;}
     .infoContacto {
       width: 15rem;
       font-size: 1rem;
@@ -1504,12 +1516,15 @@ header {
       font-size: 2rem;
     }
 
+    .mapaContenedor {
+      width: 15rem;
+    }
 }
 
 /* Tabletas (768px hasta 1024px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .seccionContacto {
-    height: 80vh;
+  .mapaContenedor {
+    width: 30rem;
   }
 }
 
@@ -1521,6 +1536,10 @@ header {
     }
     .tituloContacto {
       font-size: 5rem;
+    }
+    .mapaContenedor {
+      width: 70rem;
+      height: 35rem;
     }
 }
 
